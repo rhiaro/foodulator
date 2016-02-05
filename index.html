@@ -1,0 +1,296 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Foodulator</title>
+    <link rel="stylesheet" type="text/css" href="https://apps.rhiaro.co.uk/css/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://apps.rhiaro.co.uk/css/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+      form p { width: 100%; }
+      select { float: right; }
+      #save, #auth button { width: 100%; padding: 0.4em; }
+    </style>
+  </head>
+  <body>
+    <main class="w1of2 center">
+      <h1>Foodulator</h1>
+      <p id="auth"><button>Sign in</button></p>
+      <form>
+        <h2>Diet</h2>
+        <p><input type="checkbox" name="all" id="all" value="all" checked="true"/> <label for="all">I eat and drink anything and everything</label></p>
+          <div id="options">
+            <h3>Diets with labels</h3>
+            <p id="diet-pescetarian">
+              <input type="checkbox" name="diet" value="pescetarian" id="pescetarian" /> <label for="pescetarian">Pescetarian</label>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <p id="diet-lvegetarian">
+              <input type="checkbox" name="diet" value="lvegetarian" id="lvegetarian" /> <label for="lvegetarian">Lacto-vegetarian</label>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <p id="diet-ovegetarian">
+              <input type="checkbox" name="diet" value="ovegetarian" id="ovegetarian" /> <label for="ovegetarian">Ovo-vegetarian</label>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <p id="diet-vegan">
+              <input type="checkbox" name="diet" value="vegan" id="vegan" /> <label for="vegan">Vegan</label>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <p id="diet-halal">
+              <input type="checkbox" name="diet" value="halal" id="halal" /> <label for="halal">Halal</label>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <p id="diet-kosher">
+              <input type="checkbox" name="diet" value="kosher" id="kosher" /> <label for="kosher">Kosher</label>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <p id="diet-fruitarian">
+              <input type="checkbox" name="diet" value="fruitarian" id="fruitarian" /> <label for="fruitarian">Fruitarian</label>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <p id="diet-raw">
+              <input type="checkbox" name="diet" value="raw" id="raw" /> <label for="raw">Raw</label>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <p id="diet-macrobiotic">
+              <input type="checkbox" name="diet" value="macrobiotic" id="macrobiotic" /> <label for="macrobiotic">Macrobiotic</label>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <p id="diet-organic">
+              <input type="checkbox" name="diet" value="organic" id="organic" /> <label for="organic">Organic</label>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <h3>Exclusions</h3>
+            <p id="diet-gluten">
+              <input type="checkbox" name="diet" value="gluten" id="gluten" /> <label for="gluten">Gluten</label>
+              <select class="exclude">
+                <option value="no">None</option>
+                <option value="low">Low</option>
+              </select>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <p id="diet-gluten">
+              <input type="checkbox" name="diet" value="dairy" id="dairy" /> <label for="dairy">Dairy</label>
+              <select class="exclude">
+                <option value="no">None</option>
+                <option value="low">Low</option>
+              </select>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <p id="diet-gluten">
+              <input type="checkbox" name="diet" value="eggs" id="eggs" /> <label for="eggs">Eggs</label>
+              <select class="exclude">
+                <option value="no">None</option>
+                <option value="low">Low</option>
+              </select>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <p id="diet-gluten">
+              <input type="checkbox" name="diet" value="mustard" id="mustard" /> <label for="mustard">Mustard</label>
+              <select class="exclude">
+                <option value="no">None</option>
+                <option value="low">Low</option>
+              </select>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <p id="diet-sugar">
+              <input type="checkbox" name="diet" value="sugar" id="sugar" /> <label for="sf">Sugar</label>
+              <select class="exclude">
+                <option value="no">None</option>
+                <option value="low">Low</option>
+              </select>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <p id="diet-nuts">
+              <input type="checkbox" name="diet" value="nuts" id="nuts" /> <label for="nf">Nuts</label>
+              <select class="exclude">
+                <option value="no">None</option>
+                <option value="low">Low</option>
+              </select>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <p id="diet-alcohol">
+              <input type="checkbox" name="diet" value="alcohol" id="alcohol" /> <label for="alcohol">Alcohol</label>
+              <select class="exclude">
+                <option value="no">None</option>
+                <option value="low">Low</option>
+              </select>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <p id="diet-caffeine">
+              <input type="checkbox" name="diet" value="caffeine" id="caffeine" /> <label for="caffeine">Caffeine</label>
+              <select class="exclude">
+                <option value="no">None</option>
+                <option value="low">Low</option>
+              </select>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <p id="diet-soy">
+              <input type="checkbox" name="diet" value="soy" id="soy" /> <label for="soy">Soy</label>
+              <select class="exclude">
+                <option value="no">None</option>
+                <option value="low">Low</option>
+              </select>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <p id="diet-carb">
+              <input type="checkbox" name="diet" value="carb" id="carb" /> <label for="lowcarb">Carbs</label>
+              <select class="exclude">
+                <option value="no">None</option>
+                <option value="low">Low</option>
+              </select>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <p id="diet-salt">
+              <input type="checkbox" name="diet" value="salt" id="salt" /> <label for="salt">Salt</label>
+              <select class="exclude">
+                <option value="no">None</option>
+                <option value="low">Low</option>
+              </select>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <p id="diet-fat">
+              <input type="checkbox" name="diet" value="fat" id="fat" /> <label for="fat">Fat</label>
+              <select class="exclude">
+                <option value="no">None</option>
+                <option value="low">Low</option>
+              </select>
+              <select class="strength">
+                <option value="req-strong">Required with no risk of contamination</option>
+                <option value="req-weak" selected="selected">Required</option>
+                <option value="pref-strong">Strong preference</option>
+                <option value="pref-weak">Weak preference</option>
+              </select>
+            </p>
+            <h3>Make your own</h3>
+            <div id="others">
+              <p id="diet-other">
+                <input type="checkbox" name="diet" value="other" /> <input type="text" id="other" />
+                <select class="exclude">
+                  <option value="">n/a</option>
+                  <option value="no">None</option>
+                  <option value="low">Low</option>
+                </select>
+                <select class="strength">
+                  <option value="req-strong">Required with no risk of contamination</option>
+                  <option value="req-weak" selected="selected">Required</option>
+                  <option value="pref-strong">Strong preference</option>
+                  <option value="pref-weak">Weak preference</option>
+                </select>
+              </p>
+            </div>
+            <p><button id="add-other">Add another</button></p>
+        </div>
+        <p><input type="submit" name="save" value="Save" id="save"/></p>
+      </form>
+    </main>
+    <script src="js/rdflib.min.js"></script>
+    <script src="https://solid.github.io/solid.js/dist/solid.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
